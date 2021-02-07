@@ -20,6 +20,11 @@ spec:
           ports:
             - containerPort: 9090
               name: default
+          resources:
+            limits:
+              memory: "500Mi"
+            requests:
+              memory: "250Mi"
           volumeMounts:
             - name: config-volume
               mountPath: /etc/prometheus
